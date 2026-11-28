@@ -15,7 +15,7 @@ namespace DemoMuhasebeProgram
 {
     public partial class Personel_Islemleri : UserControl
     {
-        PersonelListe personelList = new PersonelListe();
+        PersonelListe personelList;
         public enum Mod
         {
             New, Edit_Is_Not_Selected, Edit_Is_Selected, Empty
@@ -89,22 +89,19 @@ namespace DemoMuhasebeProgram
         void comboAndGiridLoad(PersonelListe personelList)
         {
             if (dataGridView1.Rows.Count != 0)
-            {
                 dataGridView1.Rows.Clear();
-            }
             if (comboBox1.Items.Count != 0)
-            {
                 comboBox1.Items.Clear();
-            }
-            for (int i = 0; i < personelList.personels.Count; i++)
+            foreach (var kart in personelList.personels)
             {
-                dataGridView1.Rows.Add(personelList.personels[i].name, personelList.personels[i].lastName, personelList.personels[i].tcNo, personelList.personels[i].telNo, personelList.personels[i].durum);
-                comboBox1.Items.Add(personelList.personels[i].name + " " + personelList.personels[i].lastName);
+                dataGridView1.Rows.Add(kart.name, kart.lastName, kart.tcNo, kart.telNo, kart.durum);
+                comboBox1.Items.Add(kart.name + " " + kart.lastName);
             }
         }
-        public Personel_Islemleri()
+        public Personel_Islemleri(PersonelListe lPersonel)
         {
             InitializeComponent();
+            personelList = lPersonel;
             modum = Mod.Empty;
             comboAndGiridLoad(personelList);
             SetMod();

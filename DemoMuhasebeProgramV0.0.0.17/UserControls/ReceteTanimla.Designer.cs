@@ -36,8 +36,9 @@
             Birim = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             panel6 = new Panel();
-            btnOutTheExcell = new Button();
+            button1 = new Button();
             InToExcell = new Button();
+            btnOutTheExcell = new Button();
             panel5 = new Panel();
             txtMiktar = new TextBox();
             btnOk = new Button();
@@ -54,7 +55,8 @@
             panel3 = new Panel();
             btnEdit = new Button();
             btnNew = new Button();
-            button1 = new Button();
+            cmbSelectedRecete = new ComboBox();
+            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -136,16 +138,16 @@
             panel6.Size = new Size(281, 97);
             panel6.TabIndex = 3;
             // 
-            // btnOutTheExcell
+            // button1
             // 
-            btnOutTheExcell.Dock = DockStyle.Bottom;
-            btnOutTheExcell.Location = new Point(0, 68);
-            btnOutTheExcell.Name = "btnOutTheExcell";
-            btnOutTheExcell.Size = new Size(281, 29);
-            btnOutTheExcell.TabIndex = 1;
-            btnOutTheExcell.Text = "Excellden Veri Al";
-            btnOutTheExcell.UseVisualStyleBackColor = true;
-            btnOutTheExcell.Click += btnOutTheExcell_Click;
+            button1.Dock = DockStyle.Bottom;
+            button1.Location = new Point(0, 10);
+            button1.Name = "button1";
+            button1.Size = new Size(281, 29);
+            button1.TabIndex = 2;
+            button1.Text = "Excellden Toplu Reçete Al";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // InToExcell
             // 
@@ -157,6 +159,17 @@
             InToExcell.Text = "Kaydet";
             InToExcell.UseVisualStyleBackColor = true;
             InToExcell.Click += InToExcell_Click;
+            // 
+            // btnOutTheExcell
+            // 
+            btnOutTheExcell.Dock = DockStyle.Bottom;
+            btnOutTheExcell.Location = new Point(0, 68);
+            btnOutTheExcell.Name = "btnOutTheExcell";
+            btnOutTheExcell.Size = new Size(281, 29);
+            btnOutTheExcell.TabIndex = 1;
+            btnOutTheExcell.Text = "Excellden Veri Al";
+            btnOutTheExcell.UseVisualStyleBackColor = true;
+            btnOutTheExcell.Click += btnOutTheExcell_Click;
             // 
             // panel5
             // 
@@ -171,7 +184,7 @@
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label2);
             panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(0, 95);
+            panel5.Location = new Point(0, 177);
             panel5.Name = "panel5";
             panel5.Size = new Size(281, 180);
             panel5.TabIndex = 2;
@@ -256,13 +269,14 @@
             // 
             // panel4
             // 
-            panel4.AutoSize = true;
+            panel4.Controls.Add(label6);
+            panel4.Controls.Add(cmbSelectedRecete);
             panel4.Controls.Add(cmbSelected);
             panel4.Controls.Add(label1);
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 58);
             panel4.Name = "panel4";
-            panel4.Size = new Size(281, 37);
+            panel4.Size = new Size(281, 119);
             panel4.TabIndex = 1;
             // 
             // cmbSelected
@@ -316,16 +330,23 @@
             btnNew.UseVisualStyleBackColor = true;
             btnNew.Click += btnNew_Click;
             // 
-            // button1
+            // cmbSelectedRecete
             // 
-            button1.Dock = DockStyle.Bottom;
-            button1.Location = new Point(0, 10);
-            button1.Name = "button1";
-            button1.Size = new Size(281, 29);
-            button1.TabIndex = 2;
-            button1.Text = "Excellden Toplu Reçete Al";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            cmbSelectedRecete.FormattingEnabled = true;
+            cmbSelectedRecete.Location = new Point(125, 40);
+            cmbSelectedRecete.Name = "cmbSelectedRecete";
+            cmbSelectedRecete.Size = new Size(153, 28);
+            cmbSelectedRecete.TabIndex = 2;
+            cmbSelectedRecete.SelectedIndexChanged += cmbSelectedRecete_SelectedIndexChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 43);
+            label6.Name = "label6";
+            label6.Size = new Size(104, 20);
+            label6.TabIndex = 3;
+            label6.Text = "Reçete Seçiniz";
             // 
             // ReceteTanimla
             // 
@@ -377,5 +398,7 @@
         private Button btnOutTheExcell;
         private Button InToExcell;
         private Button button1;
+        private Label label6;
+        private ComboBox cmbSelectedRecete;
     }
 }

@@ -40,9 +40,13 @@
             button7 = new Button();
             button6 = new Button();
             panel7 = new Panel();
+            btnPersonelGiderIsleme = new Button();
+            btnGiderIsleme = new Button();
+            btnReceteListele = new Button();
             btnFaturaIsleme = new Button();
             button5 = new Button();
             panel5 = new Panel();
+            btnGiderKartlari = new Button();
             btnReceteTanimla = new Button();
             btnSatisKartlari = new Button();
             btnHammaddeKart = new Button();
@@ -56,7 +60,7 @@
             panel6 = new Panel();
             btnKapat = new Button();
             btnYenile = new Button();
-            btnReceteListele = new Button();
+            btnGelirKartleriTanimla = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -76,7 +80,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 656);
+            panel1.Size = new Size(1194, 855);
             panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -85,7 +89,7 @@
             tabControl1.Location = new Point(250, 57);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(944, 599);
+            tabControl1.Size = new Size(944, 798);
             tabControl1.TabIndex = 2;
             tabControl1.MouseClick += tabControl1_MouseClick;
             // 
@@ -96,7 +100,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 57);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 599);
+            panel2.Size = new Size(250, 798);
             panel2.TabIndex = 0;
             // 
             // panel4
@@ -115,13 +119,13 @@
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
             panel4.Padding = new Padding(10);
-            panel4.Size = new Size(250, 599);
+            panel4.Size = new Size(250, 798);
             panel4.TabIndex = 1;
             // 
             // button11
             // 
             button11.Dock = DockStyle.Bottom;
-            button11.Location = new Point(10, 525);
+            button11.Location = new Point(10, 724);
             button11.Name = "button11";
             button11.Size = new Size(230, 29);
             button11.TabIndex = 11;
@@ -134,7 +138,7 @@
             panel9.AutoSize = true;
             panel9.Controls.Add(button8);
             panel9.Dock = DockStyle.Top;
-            panel9.Location = new Point(10, 478);
+            panel9.Location = new Point(10, 583);
             panel9.Name = "panel9";
             panel9.Padding = new Padding(5);
             panel9.Size = new Size(230, 40);
@@ -154,7 +158,7 @@
             // button9
             // 
             button9.Dock = DockStyle.Top;
-            button9.Location = new Point(10, 443);
+            button9.Location = new Point(10, 548);
             button9.Name = "button9";
             button9.Size = new Size(230, 35);
             button9.TabIndex = 9;
@@ -167,7 +171,7 @@
             panel8.AutoSize = true;
             panel8.Controls.Add(button7);
             panel8.Dock = DockStyle.Top;
-            panel8.Location = new Point(10, 403);
+            panel8.Location = new Point(10, 508);
             panel8.Name = "panel8";
             panel8.Padding = new Padding(5);
             panel8.Size = new Size(230, 40);
@@ -188,7 +192,7 @@
             // button6
             // 
             button6.Dock = DockStyle.Top;
-            button6.Location = new Point(10, 368);
+            button6.Location = new Point(10, 473);
             button6.Name = "button6";
             button6.Size = new Size(230, 35);
             button6.TabIndex = 7;
@@ -198,15 +202,50 @@
             // 
             // panel7
             // 
+            panel7.Controls.Add(btnPersonelGiderIsleme);
+            panel7.Controls.Add(btnGiderIsleme);
             panel7.Controls.Add(btnReceteListele);
             panel7.Controls.Add(btnFaturaIsleme);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(10, 276);
+            panel7.Location = new Point(10, 346);
             panel7.Name = "panel7";
             panel7.Padding = new Padding(5);
-            panel7.Size = new Size(230, 92);
+            panel7.Size = new Size(230, 127);
             panel7.TabIndex = 5;
             panel7.Visible = false;
+            // 
+            // btnPersonelGiderIsleme
+            // 
+            btnPersonelGiderIsleme.Dock = DockStyle.Top;
+            btnPersonelGiderIsleme.Location = new Point(5, 93);
+            btnPersonelGiderIsleme.Name = "btnPersonelGiderIsleme";
+            btnPersonelGiderIsleme.Size = new Size(220, 29);
+            btnPersonelGiderIsleme.TabIndex = 6;
+            btnPersonelGiderIsleme.Text = "Personel Gider İşleme";
+            btnPersonelGiderIsleme.UseVisualStyleBackColor = true;
+            btnPersonelGiderIsleme.Click += btnPersonelGiderIsleme_Click;
+            // 
+            // btnGiderIsleme
+            // 
+            btnGiderIsleme.Dock = DockStyle.Top;
+            btnGiderIsleme.Location = new Point(5, 64);
+            btnGiderIsleme.Name = "btnGiderIsleme";
+            btnGiderIsleme.Size = new Size(220, 29);
+            btnGiderIsleme.TabIndex = 5;
+            btnGiderIsleme.Text = "Gider İşleme";
+            btnGiderIsleme.UseVisualStyleBackColor = true;
+            btnGiderIsleme.Click += btnGiderIsleme_Click;
+            // 
+            // btnReceteListele
+            // 
+            btnReceteListele.Dock = DockStyle.Top;
+            btnReceteListele.Location = new Point(5, 35);
+            btnReceteListele.Name = "btnReceteListele";
+            btnReceteListele.Size = new Size(220, 29);
+            btnReceteListele.TabIndex = 4;
+            btnReceteListele.Text = "Reçete Listesi";
+            btnReceteListele.UseVisualStyleBackColor = true;
+            btnReceteListele.Click += btnReceteListele_Click;
             // 
             // btnFaturaIsleme
             // 
@@ -222,7 +261,7 @@
             // button5
             // 
             button5.Dock = DockStyle.Top;
-            button5.Location = new Point(10, 241);
+            button5.Location = new Point(10, 311);
             button5.Name = "button5";
             button5.Size = new Size(230, 35);
             button5.TabIndex = 6;
@@ -232,6 +271,8 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(btnGelirKartleriTanimla);
+            panel5.Controls.Add(btnGiderKartlari);
             panel5.Controls.Add(btnReceteTanimla);
             panel5.Controls.Add(btnSatisKartlari);
             panel5.Controls.Add(btnHammaddeKart);
@@ -241,9 +282,20 @@
             panel5.Location = new Point(10, 45);
             panel5.Name = "panel5";
             panel5.Padding = new Padding(5);
-            panel5.Size = new Size(230, 196);
+            panel5.Size = new Size(230, 266);
             panel5.TabIndex = 4;
             panel5.Visible = false;
+            // 
+            // btnGiderKartlari
+            // 
+            btnGiderKartlari.Dock = DockStyle.Top;
+            btnGiderKartlari.Location = new Point(5, 153);
+            btnGiderKartlari.Name = "btnGiderKartlari";
+            btnGiderKartlari.Size = new Size(220, 29);
+            btnGiderKartlari.TabIndex = 6;
+            btnGiderKartlari.Text = "Gider Kartları Tanımla";
+            btnGiderKartlari.UseVisualStyleBackColor = true;
+            btnGiderKartlari.Click += btnGiderKartlari_Click;
             // 
             // btnReceteTanimla
             // 
@@ -314,7 +366,7 @@
             // button3
             // 
             button3.Dock = DockStyle.Bottom;
-            button3.Location = new Point(10, 554);
+            button3.Location = new Point(10, 753);
             button3.Name = "button3";
             button3.Size = new Size(230, 35);
             button3.TabIndex = 2;
@@ -385,22 +437,22 @@
             btnYenile.UseVisualStyleBackColor = true;
             btnYenile.Click += btnYenile_Click;
             // 
-            // btnReceteListele
+            // btnGelirKartleriTanimla
             // 
-            btnReceteListele.Dock = DockStyle.Top;
-            btnReceteListele.Location = new Point(5, 35);
-            btnReceteListele.Name = "btnReceteListele";
-            btnReceteListele.Size = new Size(220, 29);
-            btnReceteListele.TabIndex = 4;
-            btnReceteListele.Text = "Reçete Listesi";
-            btnReceteListele.UseVisualStyleBackColor = true;
-            btnReceteListele.Click += btnReceteListele_Click;
+            btnGelirKartleriTanimla.Dock = DockStyle.Top;
+            btnGelirKartleriTanimla.Location = new Point(5, 182);
+            btnGelirKartleriTanimla.Name = "btnGelirKartleriTanimla";
+            btnGelirKartleriTanimla.Size = new Size(220, 29);
+            btnGelirKartleriTanimla.TabIndex = 7;
+            btnGelirKartleriTanimla.Text = "Gelir Kartları";
+            btnGelirKartleriTanimla.UseVisualStyleBackColor = true;
+            btnGelirKartleriTanimla.Click += btnGelirKartleriTanimla_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1194, 656);
+            ClientSize = new Size(1194, 855);
             Controls.Add(panel1);
             Name = "Form1";
             Text = "Form1";
@@ -449,5 +501,9 @@
         private Button btnSatisKartlari;
         private Button btnReceteTanimla;
         private Button btnReceteListele;
+        private Button btnGiderKartlari;
+        private Button btnGiderIsleme;
+        private Button btnPersonelGiderIsleme;
+        private Button btnGelirKartleriTanimla;
     }
 }
